@@ -1,0 +1,31 @@
+
+.nav-cta-button {
+    height: 30px;
+    display: flex;
+    border: 0;
+    margin-left: 8px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    background: #ffffff;
+    background-size: 200% 200%;
+    transition: 0.3s;
+    width: 100px;
+    align-items: center;
+  }
+
+  .icon-button-chain svg {
+    --button-size: calc(var(--nav-size) * 0.5);
+    padding-right: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+    width: 20px;
+    height: 20px;
+  }
