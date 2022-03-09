@@ -23,13 +23,13 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .side-bar {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   padding: 20px;
   margin: 10px;
   width: 100%;
@@ -46,7 +46,7 @@
 
 .main-container {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   padding: 10px;
   flex-direction: column;
   margin: 10px;
@@ -72,7 +72,21 @@
 }
 
 .wallet {
-  padding-left: 10px;
+  padding: 0 10px 0 10px;
+  height: 30px;
+  display: flex;
+  border: 1px solid #eb4d68;
+  border-radius: 5px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  background: #ffffff;
+  background-size: 200% 200%;
+  width: 140px;
+  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-nav {
@@ -80,11 +94,13 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
+  align-items: flex-end;
 }
 
 .nav-item {
   width: auto;
   display: flex;
+  cursor: pointer;
   align-items: flex-start;
   justify-content: center;
 }
@@ -117,11 +133,11 @@
 
 .icon-button {
   --button-size: calc(var(--nav-size) * 0.45);
-  width: var(--button-size);
+  width: 163px;
   height: var(--button-size);
   background-color: #f8ebed;
   border-radius: 5px;
-  padding: 5px;
+  padding: 0.5rem;
   margin: 5px;
   display: flex;
   align-items: center;
@@ -132,15 +148,15 @@
 
 .active-tab {
   color: black;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
 }
 
 .dropdown {
   position: absolute;
   top: 30px;
-  right: 131px;
-  width: 164px;
+  right: 169px;
+  width: 163px;
   background-color: #f8ebed;
   border-radius: 5px;
   padding: 10px 0.5rem 0.5rem 0.5rem;
@@ -172,10 +188,11 @@
 
 .tabs {
   display: flex;
+  flex-direction: column;
 }
 
 .tab-button {
-  height: 30px;
+  height: 10px;
   display: flex;
   margin: 20px 0 20px 0;
   border: 0;

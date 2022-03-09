@@ -5,6 +5,10 @@ import { ReactComponent as SearchIcon } from '../assets/icons/search-icon.svg';
 import { ReactComponent as usdcIcon } from '../assets/icons/usdc.svg';
 import { ReactComponent as daiIcon } from '../assets/icons/dai.svg';
 import { ReactComponent as usdtIcon } from '../assets/icons/usdt.svg';
+import { ReactComponent as multiIcon } from '../assets/icons/multichain.svg';
+import { ReactComponent as ustIcon } from '../assets/icons/ust.svg';
+import { ReactComponent as zenlinkIcon } from '../assets/icons/zenlink.svg';
+
 
 
 
@@ -15,7 +19,9 @@ export const SEARCH_ICON = SearchIcon;
 export const USDC = usdcIcon;
 export const DAI = daiIcon;
 export const USDT = usdtIcon;
-
+export const MULTI = multiIcon;
+export const UST = ustIcon;
+export const ZLK_ICON = zenlinkIcon;
 
 export const CoingeckoData = async() => {
     let CgD = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc`)

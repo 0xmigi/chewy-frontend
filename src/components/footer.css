@@ -1,43 +1,43 @@
 .socails {
-    display: flex;
-    height: 100px;
-    position: relative;
-    /* height: 100%; */
-    width: 100%;
-    color: black;
-    background-color: #ffffff;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    align-items: center;
-  }
-  
-  .twitter-logo {
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  .discord-logo {
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  .github-logo {
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  .external-docs {
-    display: flex;
-    width: 100%;
-    color:  #ffc2cd;
-    font-size: 25px;
-    font-weight: 500;
-    justify-content: space-around;
-  }
+  display: flex;
+  height: 100px;
+  position: relative;
+  /* height: 100%; */
+  width: 100%;
+  color: black;
+  background-color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.twitter-logo {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.discord-logo {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.github-logo {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.external-docs {
+  display: flex;
+  width: 100%;
+  color:  #ffc2cd;
+  font-size: 25px;
+  font-weight: 500;
+  justify-content: space-around;
+}

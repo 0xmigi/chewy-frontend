@@ -5,9 +5,11 @@ import githubIcon from '../assets/icons/cwy-github.svg';
 
 
 export default function Footer(props) {
-    const DISCORD_LINK = `https://discord.gg/`;
+    const DISCORD_LINK = `https://discord.gg/V66AEzxZaY`;
     const TWITTER_LINK = `https://twitter.com/cwydotmoney`;
     const GITHUB_LINK = `https://github.com/0xRuski`;
+    const GOV_LINK = ``;
+    const DOCS_LINK = ``;
 
 
     return (

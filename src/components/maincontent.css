@@ -21,13 +21,30 @@
 .main-content {
   display: flex;
   height: 90vh;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   flex-direction: column;
   margin: 10px;
   width: 100%;
   max-width: 2400px;
   align-items: center;
   justify-content: flex-start;
+}
+
+.filter-container {
+  /* margin-bottom: 20px; */
+}
+
+.filter {
+  height: 30px;
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  justify-content: space-between;
+  /* border: 1px solid #000000; */
+  transition: background var(--speed);
 }
 
 .search-bar {
@@ -69,14 +86,14 @@
 
 .pools {
   width: 100%;
-  margin: 0 20px 0 20px;
   padding: 0;
 }
 
 .pool-item {
   height: 30px;
   display: flex;
-  margin-top: 30px;
+  margin: 5px 0;
+  padding: 20px;
   cursor: pointer;
   align-items: center;
   background-color: #ffffff;
@@ -84,45 +101,123 @@
   transition: background var(--speed);
 }
 
+.pool-item:hover {
+  background-color: #f7f7f7;
+}
+
 .pool-icon {
-  display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 30px;
 }
 
-.pool-dropdown {
+.pool-overview {
   height: 30px;
   width: 100%;
-  margin-left: 20px;
+  margin-left: 10px;
   display: flex;
   cursor: pointer;
   align-items: center;
-  background-color: #ffffff;
   border-radius: 5px;
   justify-content: space-between;
+}
+
+.pool-dropdown {
+  height: 180px;
+  margin: 5px 0;
+  padding: 20px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .token-types {
   position: relative;
   display: flex;
-  margin-left: -6px;
+  margin-left: -14px;
 }
 
 .deposit {
-    height: 30px;
-    display: flex;
-    border: 0;
-    border-color: #eb4d68;
-    margin-left: 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 400;
-    background: #f5e0e0;
-    background-size: 200% 200%;
-    transition: 0.3s;
-    width: 100px;
-    align-items: center;
-    justify-content: center;
+  height: 30px;
+  display: flex;
+  border: 1px solid #eb4d68;
+  margin-left: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color:#eb4d68;
+  font-weight: 400;
+  background: #f5e0e0;
+  background-size: 200% 200%;
+  transition: 0.3s;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.deposit-input {
+  display: flex;
+  width: 220px;
+  height: 32px;
+  margin: 3px 20px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f8ebed;
+  border: 0;
+  padding-left: 20px;
+  cursor: text;
+  font-size: 13px;
+  background-size: 200% 200%;
+  transition: 0.3s;
+  align-items: baseline;
+}
+
+.approve-withdraw {
+  height: 32px;
+  width: 220px;
+  display: flex;
+  border: 1px solid #eb4d68;
+  margin: 0 30px 30px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color:#eb4d68;
+  font-weight: 400;
+  background: #f5e0e0;
+  background-size: 200% 200%;
+  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-middle {
+  width: 100%;
+  padding: 30px 0;
+  border-top: 1px solid #eb4d672f;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  /* background-color: #ffffff; */
+  justify-content: center;
+}
+
+.dropdown-bottom {
+  height: 30px;
+  width: 100%;
+  /* margin: 10px; */
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  /* background-color: #ffffff; */
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.name {
+  width: 50px;
 }

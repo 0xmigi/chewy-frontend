@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter as Router} from 'react-router-dom';
+import { MoralisProvider } from 'react-moralis';
+
+const moralisAppId = process.env.REACT_APP_MORALIS_APP_ID;
+const moralisServerURL = process.env.REACT_APP_MORALIS_SERVER_URL;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router hashtype="noslash">
+    <MoralisProvider appId={moralisAppId} serverUrl={moralisServerURL} >
+      <App />
+    </MoralisProvider>
+  </Router>,
   document.getElementById('root')
 );
 

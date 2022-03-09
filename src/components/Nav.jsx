@@ -10,12 +10,17 @@ export default function Nav(props) {
 
     const [activeMenu, setActiveMenu] = useState('main');
     const [menuHeight, setMenuHeight] = useState(null);
+    const chainIcon = <div><MOVR_ICON/></div>
+    const chainName = "Moonriver"
     const dropdownRef = useRef(null);
+
+    const movrChain = "0x505";
+    const glmrChain = "0x504";
 
     const chainSwitchMovr = () => (
         <div to="moonriver">
           <button
-            // onClick={() => {setNewChain("0x505"); setColor('#fafa6e');}}
+            onClick={() => {props.setNewChain({ movrChain, chainIcon, chainName })}}
             className="nav-cta-button"
             >
                Moonriver
@@ -26,7 +31,7 @@ export default function Nav(props) {
     const chainSwitchGlmr = () => (
         <div to="glmr">
           <button
-            // onClick={() => {setNewChain("0x504"); setColor('#00898a');}}
+            onClick={() => {props.setNewChain("0x504")}}
             className="nav-cta-button"
             >
                Moonbeam
@@ -105,6 +110,6 @@ export default function Nav(props) {
                 </DropdownItem>
                 </div>
             </CSSTransition> */}
-        </div>         
+        </div>   
     )
 }
