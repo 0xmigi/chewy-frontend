@@ -12,7 +12,6 @@ import Maincontent from './components/Maincontent';
 
 
 
-
 let useClickOutside = (handler) => {
   let domNode = useRef()
 
@@ -37,17 +36,33 @@ let useClickOutside = (handler) => {
 
 export default function App(props) {
 
+  const movrConfig = [
+    {icon: <MOVR_ICON />},
+    {name: "Moonriver"}
+  ]
+  const glmrConfig = [
+    {icon: <GLMR_ICON />},
+    {name: "Moonbeam"}
+  ]
+
+
+  const [chain, setChain] = useState([{icon: <MOVR_ICON />}, {name: "Moonriver"}]);
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState();
-  const [chainIcon, setChainIcon] = useState(<MOVR_ICON />);
-  const [chainName, setChainName] = useState("Moonriver");
   const [newChain, setNewChain] = useState();
   const [defaultAccount, setDefaultAccount] = useState("Connect");
   const [errorMessage, setErrorMessage] = useState("Connect");
 
   useEffect(() => {
-    // setChainIcon(props.newChain.chainIcon)
-    // setChainName(props.newChain.chainName)
+    if (newChain === "0x505") {
+      setChain(movrConfig)
+      console.log("connecting Moonriver", movrConfig)
+    } else if (newChain === "0x504") {
+      setChain(glmrConfig)
+      console.log("connecting to Moonbeam", glmrConfig)
+    } else {
+      console.log("chain not supported")
+    }
   }, [newChain])
 
   const Tabs = (props) => {
@@ -90,12 +105,12 @@ export default function App(props) {
   }
 
   const NavItemChains = (props) => {
-    console.log("newChain is", newChain);
+    // console.log("newChain is", newChain);
     return (
         <li ref={domNode} className="nav-item">
           <div href="#" className="icon-button" onClick={() => setOpen(!open)}>
-            <span className="icon-button-chain">{chainIcon}</span>
-            <span className="chain-name">{chainName}</span>
+            <span className="icon-button-chain">{chain[0].icon}</span>
+            <span className="chain-name">{chain[1].name}</span>
             <span className="icon-button-chain">{props.icon}</span>
           </div>
           {open && props.children}
@@ -108,6 +123,7 @@ export default function App(props) {
     const Chains = () => {
       const { chainId, chain } = useChain();
      
+      console.log("chainId is", chainId);
       return() => {
   
         try {
@@ -183,17 +199,14 @@ export default function App(props) {
           </div>
           <div className="connection-items">
             <NavItemChains icon={<Chevron />} >
-              <Nav setNewChain={setNewChain}
-                  //  chainIcon={setChainIcon}
-                  //  chainName={setChainName}
-                   />
+              <Nav setNewChain={setNewChain}/>
             </NavItemChains>
             <div >
                 {metaMaskConnect()}
             </div>
           </div>
         </Navbar>
-        <Maincontent />
+        <Maincontent newChain={newChain}/>
       </div>
     </div>
   );

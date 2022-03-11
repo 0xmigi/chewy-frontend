@@ -14,13 +14,11 @@ export default function Nav(props) {
     const chainName = "Moonriver"
     const dropdownRef = useRef(null);
 
-    const movrChain = "0x505";
-    const glmrChain = "0x504";
 
     const chainSwitchMovr = () => (
         <div to="moonriver">
           <button
-            onClick={() => {props.setNewChain({ movrChain, chainIcon, chainName })}}
+            onClick={() => {props.setNewChain("0x505")}}
             className="nav-cta-button"
             >
                Moonriver
@@ -97,19 +95,6 @@ export default function Nav(props) {
                     </DropdownItem>
                 </div>
             </CSSTransition>
-
-            {/* <CSSTransition
-                in={activeMenu === 'evmChains'}
-                timeout={500}
-                classNames="menu-secondary"
-                unmountOnExit
-                onEnter={calcHeight}>
-                <div className="menu">
-                <DropdownItem goToMenu="main" leftIcon={<GLMR_ICON />}>
-                    <h3>chains</h3>
-                </DropdownItem>
-                </div>
-            </CSSTransition> */}
         </div>   
     )
 }
